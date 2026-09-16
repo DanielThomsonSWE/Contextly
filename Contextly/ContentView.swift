@@ -137,11 +137,17 @@ struct ContentView: View {
             Button {
                 isShowingSearch = true
             } label: {
-                Image(systemName: "plus")
-                    .font(.system(size: 22, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(width: 46, height: 46)
-                    .background(Theme.purple, in: Circle())
+                HStack(spacing: 4) {
+                    Text("AI")
+                        .font(.system(size: 15, weight: .bold))
+                        .foregroundStyle(.white)
+                    Image(systemName: "sparkle.magnifyingglass")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundStyle(.white)
+                }
+                .frame(width: 72)
+                .padding(.vertical, 12)
+                .background(Theme.purple, in: RoundedRectangle(cornerRadius: 23))
             }
             .buttonStyle(.plain)
 
